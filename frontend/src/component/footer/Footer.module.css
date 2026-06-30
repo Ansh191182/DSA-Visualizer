@@ -1,0 +1,9 @@
+.footer{
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  font-size: 0.7rem;
+  color: hsl(215, 14%, 34%);
+  font-weight: 500;
+
+}

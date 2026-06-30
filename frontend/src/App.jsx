@@ -1,12 +1,14 @@
 import "./App.css";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LandingPage from "./Pages/LandingPage";
 function App() {
-  return (
-    <>
-      Radhe Radhe Jai shree krishn
-      <section id="spacer"></section>
-    </>
-  );
+  return <>
+  <Router>
+    <Routes>
+      <Route path="/" element={<LandingPage/>}/>
+    </Routes>
+  </Router>
+  </>;
 }
 
 export default App;

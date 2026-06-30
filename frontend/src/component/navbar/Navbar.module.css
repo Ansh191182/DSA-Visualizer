@@ -1,0 +1,161 @@
+.navbar{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #ffffff;
+}
+.container{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo h2{
+  font-size: 1.8rem;
+  font-weight: 430;
+  color: #111827;
+}
+.logo span{
+   font-size: 2rem;
+  font-weight: 700;
+}
+.buttons{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.loginBtn{
+  width: 120px;
+  height: 50px;
+  border: 1px solid #1f2937;
+  border-radius: 8px;
+  background: white;
+  font-size: 1.1rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.signupBtn {
+  width: 140px;
+  height: 52px;
+  border: none;
+  border-radius: 8px;
+  background: #f4d35e;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.loginBtn:hover {
+  background: #f4d35e;
+  border: none;
+}
+
+.signupBtn:hover {
+  background: #d7ba51;
+}
+/* =================== Responsive =================== */
+
+@media (max-width: 992px) {
+  .container {
+    width: 95%;
+  }
+
+  .logo h2 {
+    font-size: 1.7rem;
+  }
+
+  .loginbtn {
+    width: 110px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .signupBtn {
+    width: 130px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 75px;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .logo h2 {
+    font-size: 1.5rem;
+  }
+
+  .buttons {
+    gap: 12px;
+  }
+
+  .loginbtn {
+    width: 95px;
+    height: 38px;
+    font-size: 0.95rem;
+  }
+
+  .signupBtn {
+    width: 115px;
+    height: 38px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    height: 70px;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .logo h2 {
+    font-size: 1.3rem;
+  }
+
+  .buttons {
+    gap: 8px;
+  }
+
+  .loginbtn {
+    width: 80px;
+    height: 35px;
+    font-size: 0.85rem;
+  }
+
+  .signupBtn {
+    width: 95px;
+    height: 35px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo h2 {
+    font-size: 1.1rem;
+  }
+
+  .buttons {
+    gap: 6px;
+  }
+
+  .loginbtn,
+  .signupBtn {
+    width: 75px;
+    height: 34px;
+    font-size: 0.8rem;
+    padding: 0;
+  }
+}

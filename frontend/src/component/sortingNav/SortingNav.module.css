@@ -1,0 +1,152 @@
+.navbar {
+  width: 100%;
+  height: 52px;
+  background: #ffffff;
+  border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navContainer {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ================= Logo ================= */
+
+.logoSection {
+  display: flex;
+  align-items: center;
+ 
+}
+
+.logoSection img {
+  width: 58px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.logoSection h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #111827;
+}
+
+.logoSection span {
+  font-weight: 650;
+  color: #c9a227;
+}
+
+/* ================= Nav Links ================= */
+
+/* .navLinks {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #111827;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.navLinks a:hover {
+  color: #c9a227;
+}
+
+.active {
+  color: #c9a227 !important;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #c9a227;
+} */
+
+/* ================= Profile ================= */
+
+.profileicon {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #dcdcdc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profileicon img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+/* ================= Responsive ================= */
+
+@media (max-width: 992px) {
+  .navContainer {
+    width: 94%;
+  }
+
+  .logoSection h2 {
+    font-size: 1.7rem;
+  }
+
+  .navLinks {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 65px;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .logoSection h2 {
+    font-size: 1.5rem;
+  }
+
+  .logoSection img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .profileicon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .profileicon img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navContainer {
+    width: 95%;
+  }
+
+  .logoSection h2 {
+    font-size: 1.3rem;
+  }
+
+  .logoSection img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .profileicon {
+    width: 38px;
+    height: 38px;
+  }
+}

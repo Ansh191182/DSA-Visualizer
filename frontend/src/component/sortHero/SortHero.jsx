@@ -13,53 +13,77 @@ import {
 } from "lucide-react";
 import { addSortingData } from "../../store/slice/sortingSlice";
 
+import { bubbleSort } from "../../algorithms/bubbleSort";
+import toast from "react-hot-toast";
+
 const algorithm = [
   {
-    id: "bubbleSort",
+    id: "BubbleSort",
     name: "Bubble Sort",
     icon: CircleDot,
   },
   {
-    id: "selectionSort",
+    id: "SelectionSort",
     name: "Selection Sort",
     icon: SlidersHorizontal,
   },
   {
-    id: "insertionSort",
+    id: "InsertionSort",
     name: "Insertion Sort",
     icon: BarChart3,
   },
   {
-    id: "mergeSort",
+    id: "MergeSort",
     name: "Merge Sort",
     icon: GitBranch,
   },
   {
-    id: "quickSort",
+    id: "QuickSort",
     name: "Quick Sort",
     icon: Columns2,
   },
 ];
 const SortHero = () => {
   const [input, setInput] = useState(" ");
-  const [selectedAlgorithm, setSelectedAlgorithm] = useState("bubbleSort");
+  const [selectedAlgorithm, setSelectedAlgorithm] = useState("BubbleSort");
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  console.log(selectedAlgorithm);
+  // console.log(selectedAlgorithm);
 
   const numbers = input
     .split(/[ ,]+/) //split an array according to user input(means seprate value)
     .filter((num) => num.trim() !== "") //blank space avoid kar raha h
     .map((num) => Number(num)) //convert string value in nun
     .filter((num) => !isNaN(num)); //sabhi value proper integer h to sahi h
-  console.log(numbers);
+  // console.log(numbers);
   const maxValue = numbers.length > 0 ? Math.max(...numbers) : 1; //kisi array me se max value lene ka tarika spread operator se
 
+  let steps = [];
+
+  if (selectedAlgorithm == "BubbleSort") {
+    steps = bubbleSort(numbers);
+  }
+
   const visualize = () => {
+    if (!selectedAlgorithm && (!numbers || numbers.length === 0)) {
+      toast.error("Please select an algorithm and enter an input array.");
+      return;
+    }
+
+    if (!selectedAlgorithm) {
+      toast.error("Please select a sorting algorithm.");
+      return;
+    }
+
+    if (!numbers || numbers.length === 0) {
+      toast.error("Please enter an input array.");
+      return;
+    }
     dispatch(
       addSortingData({
         algorithm: selectedAlgorithm,
         input: numbers,
+        steps: steps,
       }),
     );
 
@@ -151,7 +175,7 @@ const SortHero = () => {
             </div>
 
             <div className={styles.buttons}>
-              <button className={styles.visualize}>
+              <button onClick={visualize} className={styles.visualize}>
                 <Play size={18} fill="white" />
                 Visualize
               </button>

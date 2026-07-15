@@ -1,0 +1,407 @@
+.leftPanel{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: start;
+}
+
+.backBtn{
+    width:170px;
+    height:46px;
+    border:1px solid #e5e7eb;
+    background:#fff;
+    border-radius:10px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap: 1px;
+
+    cursor:pointer;
+
+    font-size:15px;
+    font-weight:500;
+
+    transition:.25s;
+}
+
+.backBtn:hover{
+    background:#f8f8f8;
+}
+
+.heading{
+    margin-top:-8px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.dot{
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#d9a300;
+}
+
+.heading h1{
+    font-size:2.5rem;
+    font-weight:650;
+}
+
+.description{
+    margin-top:-20px;
+    line-height:1.9;
+    color:#4b5563;
+    font-size:0.8rem;
+}
+
+
+.executionBox{
+    margin-top:17px;
+    width:78%;
+    background:#fff;
+    border:1px solid #ececec;
+    border-radius:14px;
+
+    padding:15px;
+
+    /* Added */
+    height:700px;
+    display:flex;
+    flex-direction:column;
+}
+
+.executionBox h3{
+    font-size:1.4rem;
+    margin-bottom:18px;
+    text-align:center;
+
+    /* Added */
+    flex-shrink:0;
+}
+
+.stepList{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+
+    /* Added */
+    flex:1;
+    overflow-y:auto;
+    padding-right:6px;
+}
+
+/* Scrollbar */
+
+.stepList::-webkit-scrollbar{
+    width:6px;
+}
+
+.stepList::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+.stepList::-webkit-scrollbar-thumb{
+    background:#d9a300;
+    border-radius:10px;
+}
+
+.stepList::-webkit-scrollbar-thumb:hover{
+    background:#b88a00;
+}
+
+.stepCard{
+
+    display:flex;
+    align-items:center;
+    gap:24px;
+
+    border:1px solid #ececec;
+    border-radius:10px;
+
+    padding:6px;
+
+    background:#fff;
+}
+
+.active{
+
+    border-color:#e4d47f;
+}
+
+.current{
+
+    border:1.5px solid #d9a300;
+    background:#fffdf5;
+}
+
+.stepNumber{
+
+    width:30px;
+    height:30px;
+
+    border-radius:50%;
+
+    background:#d9a300;
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-weight:800;
+
+    flex-shrink:0;
+}
+
+.stepNumberGray{
+
+    width:30px;
+    height:30px;
+
+    border-radius:50%;
+
+    background:#edf0f4;
+    color:#444;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-weight:700;
+
+    flex-shrink:0;
+}
+
+.stepInfo{
+
+    flex:1;
+}
+
+.stepInfo h4{
+
+    font-size:1rem;
+    font-weight:550;
+    margin-bottom:-12px;
+}
+
+.stepInfo p{
+
+    color:#4b5563;
+    font-size:1.3rem;
+    font-weight:670;
+}
+
+.completed{
+
+    width:28px;
+    height:28px;
+
+    border-radius:50%;
+
+    border:2px solid #1db954;
+
+    color:#1db954;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-weight:bolder;
+
+    flex-shrink:0;
+}
+
+.currentDot{
+
+    width:16px;
+    height:16px;
+
+    border-radius:50%;
+
+    background:#d9a300;
+
+    margin-top:6px;
+
+    flex-shrink:0;
+}
+
+.dots{
+
+    text-align:center;
+
+    font-size:52px;
+
+    color:#777;
+}
+/* ===========================
+   Laptop
+=========================== */
+
+@media (max-width: 1200px) {
+
+    .heading h1{
+        font-size:2.2rem;
+    }
+
+    .executionBox{
+        width:100%;
+    }
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 992px) {
+
+    .leftPanel{
+        width:100%;
+    }
+
+    .backBtn{
+        width:160px;
+        height:44px;
+        font-size:14px;
+    }
+
+    .heading h1{
+        font-size:2rem;
+    }
+
+    .description{
+        font-size:0.95rem;
+        line-height:1.7;
+    }
+
+    .executionBox{
+        width:100%;
+        height:500px;
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width:768px){
+
+    .leftPanel{
+        width:100%;
+    }
+
+    .backBtn{
+        width:100%;
+        max-width:220px;
+    }
+
+    .heading{
+        margin-top:12px;
+        gap:10px;
+    }
+
+    .dot{
+        width:15px;
+        height:15px;
+    }
+
+    .heading h1{
+        font-size:1.7rem;
+    }
+
+    .description{
+        margin-top:-8px;
+        font-size:0.9rem;
+        line-height:1.6;
+    }
+
+    .executionBox{
+        width:100%;
+        height:450px;
+        padding:12px;
+    }
+
+    .executionBox h3{
+        font-size:1.2rem;
+    }
+
+    .stepCard{
+        gap:14px;
+        padding:10px;
+    }
+
+    .stepInfo h4{
+        font-size:0.95rem;
+        margin-bottom:-6px;
+    }
+
+    .stepInfo p{
+        font-size:0.95rem;
+    }
+
+}
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media (max-width:480px){
+
+    .heading{
+        align-items:flex-start;
+    }
+
+    .heading h1{
+        font-size:1.45rem;
+        line-height:1.3;
+    }
+
+    .description{
+        font-size:0.85rem;
+    }
+
+    .executionBox{
+        width:100%;
+        height:400px;
+        padding:10px;
+    }
+
+    .executionBox h3{
+        font-size:1.1rem;
+        margin-bottom:12px;
+    }
+
+    .stepCard{
+        gap:10px;
+        padding:8px;
+    }
+
+    .stepNumber,
+    .stepNumberGray{
+        width:26px;
+        height:26px;
+        font-size:13px;
+    }
+
+    .stepInfo h4{
+        font-size:0.9rem;
+    }
+
+    .stepInfo p{
+        font-size:0.82rem;
+    }
+
+    .completed{
+        width:24px;
+        height:24px;
+        font-size:13px;
+    }
+
+    .currentDot{
+        width:12px;
+        height:12px;
+    }
+
+}

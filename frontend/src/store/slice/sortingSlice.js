@@ -12,7 +12,11 @@ const sortingSlice = createSlice({
   initialState,
 
   reducers: {
-    addSortingData: (state, action) => {},
+    addSortingData: (state, action) => {
+      state.algorithm = action.payload.algorithm;
+      state.input = action.payload.input;
+      state.steps = action.payload.steps;
+    },
   },
 });
 

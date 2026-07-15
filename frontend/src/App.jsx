@@ -4,6 +4,9 @@ import LandingPage from "./Pages/LandingPage";
 import Signup from "./component/signup/Signup";
 import Login from "./component/login/Login";
 import SortingPage from "./Pages/SortingPage";
+import Visualize from "./component/visualize/Visualize";
+
+import { Toaster } from "react-hot-toast";
 function App() {
   return (
     <>
@@ -14,7 +17,10 @@ function App() {
           <Route path="/login" element={<Login />} />
 
           <Route path="/sorting" element={<SortingPage />} />
+          <Route path="/visualize" element={<Visualize />} />
         </Routes>
+
+        <Toaster position="top-center" reverseOrder={false} />
       </Router>
     </>
   );

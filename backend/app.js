@@ -16,10 +16,13 @@ app.get("/", (req, res) => {
 
 // routes
 const signupRoute = require("./routes/signupRoute");
-
+const loginRoute = require("./routes/loginRoute");
+const forgotPass = require("./routes/forgetPassword");
 // call route
 
 app.use("/", signupRoute);
+app.use("/", loginRoute);
+app.use("/", forgotPass);
 app.listen(PORT, () => {
   console.log(`server is successfully running on portNo. ${PORT}`);
 });

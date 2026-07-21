@@ -18,11 +18,13 @@ app.get("/", (req, res) => {
 const signupRoute = require("./routes/signupRoute");
 const loginRoute = require("./routes/loginRoute");
 const forgotPass = require("./routes/forgetPassword");
+const resetPass = require("./routes/resetPassword");
 // call route
 
 app.use("/", signupRoute);
 app.use("/", loginRoute);
 app.use("/", forgotPass);
+app.use("/", resetPass);
 app.listen(PORT, () => {
   console.log(`server is successfully running on portNo. ${PORT}`);
 });

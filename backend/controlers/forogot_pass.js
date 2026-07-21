@@ -11,7 +11,7 @@ const forgotPass = async (req, res) => {
       res.status(404).json({ message: "User not found" });
     }
 
-    const token = jwt.sign({ id: user._id }, process.env.SECRET_KEY, {
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
       expiresIn: "10m",
     });
 
@@ -25,6 +25,7 @@ const forgotPass = async (req, res) => {
 
     res.status(200).json({
       message: "reset Link send successfully",
+      token,
     });
   } catch (error) {
     console.log(error);

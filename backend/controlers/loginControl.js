@@ -26,7 +26,7 @@ const loginLogic = async (req, res) => {
     const isMatch = await bcrypt.compare(password, user.password);
 
     if (!isMatch) {
-      res.status("400").json({ error: "incorrect email or password" });
+      res.status(400).json({ error: "incorrect email or password" });
     }
 
     // Create JWT Token

@@ -1,9 +1,8 @@
 const express = require("express");
 const forgotPass = require("../controlers/forogot_pass");
-const authMiddleware = require("../middleware/authMiddleware");
+
 const router = express.Router();
 
-router.post("/forgot-pass", authMiddleware, forgotPass);
-
+router.post("/forgot-pass", forgotPass);
 
 module.exports = router;
